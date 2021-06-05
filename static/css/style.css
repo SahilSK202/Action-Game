@@ -179,11 +179,13 @@ a:hover {
 #myname{
     text-decoration: none;
     color: white;
+    font-size: 20px;
     font-family: 'Mountains of Christmas', cursive; 
 }
 
 #myname:hover{
     cursor: pointer;
+    background-color: transparent;
 }
 
 
