@@ -176,6 +176,16 @@ a:hover {
     color: white;
 }
 
+#myname{
+    text-decoration: none;
+    color: white;
+    font-family: 'Mountains of Christmas', cursive; 
+}
+
+#myname:hover{
+    cursor: pointer;
+}
+
 
 .playbtn{
     width: 43%;
