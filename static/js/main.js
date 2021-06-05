@@ -17,7 +17,7 @@ $(document).ready(function () {
     let chooseplayer = document.getElementById('chooseplayer');
     let mainplayer = document.getElementById('player');
     let playercaption = document.getElementById('playercaption');
-    let players = ["/static/images/boy.gif", "/static/images/couple.gif", "/static/images/girl.gif","/static/images/family.gif", "/static/images/dad.gif", "/static/images/van.gif", "/static/images/zombie.gif"];
+    let players = ["./static/images/boy.gif", "./static/images/couple.gif", "./static/images/girl.gif","./static/images/family.gif", "./static/images/dad.gif", "./static/images/van.gif", "./static/images/zombie.gif"];
     let captions = ["Brave Boy", "Love Birds", "Gusty Girl", "Family Man", "Super Dad", "Kitty Van", "Zombie Uncle"];
     let playerind = 0;
     let score = document.querySelector('#score');
