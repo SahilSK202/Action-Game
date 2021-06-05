@@ -176,7 +176,7 @@ $(document).ready(function () {
             $('.gamestart').html(`<img class="winner" src="../static/images/gameover.gif" alt=""><br><br><div class="playbtn" id="restartbtn" onclick="restart()">Play Again !</div>`);
             $('.gamestart').fadeIn(500);
             myaudio.pause();
-            myaudio = new Audio("../gameover.mp3");
+            myaudio = new Audio("../static/gameover.mp3");
             myaudio.play();
             // myaudio.loop = true;
             myaudio.autoplay = true;
