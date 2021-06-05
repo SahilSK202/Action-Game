@@ -5,7 +5,7 @@ $(document).ready(function () {
     let player = document.querySelector('.player');
     let obstacle = document.querySelector('.obstacle');
     let cloud = document.querySelector('.cloud');
-    let songs = ["/static/dhoom.mp3", "/static/despacito.mp3" , "/static/missionimpossible.mp3"];
+    let songs = ["../dhoom.mp3", "../despacito.mp3" , "../missionimpossible.mp3"];
     let songind = 0;
     let myaudio = new Audio(songs[songind]);
     let song1 = true;
@@ -17,9 +17,11 @@ $(document).ready(function () {
     let chooseplayer = document.getElementById('chooseplayer');
     let mainplayer = document.getElementById('player');
     let playercaption = document.getElementById('playercaption');
-    let players = ["./static/images/boy.gif", "./static/images/couple.gif", "./static/images/girl.gif","./static/images/family.gif", "./static/images/dad.gif", "./static/images/van.gif", "./static/images/zombie.gif"];
+    let players = ["../images/boy.gif", "../images/couple.gif", "../images/girl.gif","../images/family.gif", "../images/dad.gif", "../images/van.gif", "../images/zombie.gif"];
     let captions = ["Brave Boy", "Love Birds", "Gusty Girl", "Family Man", "Super Dad", "Kitty Van", "Zombie Uncle"];
     let playerind = 0;
+    let obstacles = ["../images/dragon2.gif", "../images/tiger.gif", "../images/snake.gif" ,"../images/stone.gif"];
+    let obs = document.getElementById('obstacle');
     let score = document.querySelector('#score');
     let targetscore = document.querySelector('#targetscore');
     let gamestartmsg = true;
@@ -171,10 +173,10 @@ $(document).ready(function () {
             birds.classList.toggle('birdsanimation');
             obstacle.classList.toggle('obstacleanimation');
             obstacle.style.visibility = "hidden";
-            $('.gamestart').html(`<img class="winner" src="./static/images/gameover.gif" alt=""><br><br><div class="playbtn" id="restartbtn" onclick="restart()">Play Again !</div>`);
+            $('.gamestart').html(`<img class="winner" src="../images/gameover.gif" alt=""><br><br><div class="playbtn" id="restartbtn" onclick="restart()">Play Again !</div>`);
             $('.gamestart').fadeIn(500);
             myaudio.pause();
-            myaudio = new Audio("./static/gameover.mp3");
+            myaudio = new Audio("../gameover.mp3");
             myaudio.play();
             // myaudio.loop = true;
             myaudio.autoplay = true;
@@ -221,9 +223,6 @@ $(document).ready(function () {
 
 
 
-    let obstacles = ["./static/images/dragon2.gif", "./static/images/tiger.gif", "./static/images/snake.gif" ,"./static/images/stone.gif"];
-
-    let obs = document.getElementById('obstacle')
 
     let nextlevel = function nextlevel() {
         if (gamestartmsg) {
@@ -261,7 +260,7 @@ $(document).ready(function () {
             //     nenxtlevelaud.play();
             // }, 3000);
 
-            $('.gamestart').html(`<img class="winner" src="./static/images/winner.gif" alt=""><br><div class="playbtn" id="nextlevelbtn">Next Level !</div>`);
+            $('.gamestart').html(`<img class="winner" src="../images/winner.gif" alt=""><br><div class="playbtn" id="nextlevelbtn">Next Level !</div>`);
             $('.gamestart').fadeIn(500);
 
 
