@@ -216,7 +216,7 @@ $(document).ready(function () {
                         // cityinner.style.animationDuration = 6 + 's';
                         obstacle.style.animationDuration = 3.5 +'s';
                     }
-                }, 1500);
+                }, 600);
             }
         }
     }, 50);
