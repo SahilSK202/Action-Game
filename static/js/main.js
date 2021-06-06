@@ -12,6 +12,7 @@ $(document).ready(function () {
     let previousbtn = document.querySelector('.previousbtn');
     let nextbtn = document.querySelector('.nextbtn');
     let playbtn = document.querySelector('.playbtn');
+    let container = document.querySelector('.container');
     let controls = document.getElementById('controls');
     let howtoplay = document.getElementById('howtoplay');
     let chooseplayer = document.getElementById('chooseplayer');
@@ -38,6 +39,7 @@ $(document).ready(function () {
             // controls.style.visibility = "hidden";
             controls.style.display = "none";
             howtoplay.style.display = "none";
+            container.style.display = "none";
             gamestartmsg = false;
             setTimeout(() => {
                 document.getElementById('obstacle').style.visibility = "visible";
@@ -56,7 +58,7 @@ $(document).ready(function () {
             play();
         }
 
-        if (e.key === 'm' || e.key === 'M') {
+        if ((e.key === 'm' || e.key === 'M')&& !gamestartmsg) {
             
             myaudio.pause();
             songind = (songind + 1) % songs.length;
@@ -173,7 +175,9 @@ $(document).ready(function () {
             birds.classList.toggle('birdsanimation');
             obstacle.classList.toggle('obstacleanimation');
             obstacle.style.visibility = "hidden";
-            $('.gamestart').html(`<img class="winner" src="../static/images/gameover.gif" alt=""><br><br><div class="playbtn" id="restartbtn" onclick="restart()">Play Again !</div>`);
+            document.getElementById("playerscore").value = parseInt(score.innerHTML.toString());
+            // document.getElementById("submitscore").click();
+            $('.gamestart').html(`<img class="winner" src="../static/images/gameover.gif" alt=""><br><br><div class="playbtn" id="restartbtn">Play Again !</div>`);
             $('.gamestart').fadeIn(500);
             myaudio.pause();
             myaudio = new Audio("../static/gameover.mp3");
@@ -184,13 +188,20 @@ $(document).ready(function () {
 
             document.addEventListener('keydown', function (e) {
                 if (e.key === 'Enter') {
-                    window.location.reload();
+                    document.getElementById("submitscore").click();
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 500);
+
                 }
 
             });
 
             document.getElementById("restartbtn").onclick = function() {
-                window.location.reload();
+                document.getElementById("submitscore").click();
+                setTimeout(() => {
+                    window.location.reload();
+                }, 500);
                 
             }
 
