@@ -8,13 +8,16 @@ $(document).ready(function () {
     let songs = ["../static/dhoom.mp3", "../static/despacito.mp3" , "../static/missionimpossible.mp3"];
     let songind = 0;
     let myaudio = new Audio(songs[songind]);
-    let song1 = true;
     let previousbtn = document.querySelector('.previousbtn');
     let nextbtn = document.querySelector('.nextbtn');
-    let playbtn = document.querySelector('.playbtn');
+    let playbtn = document.getElementById('playbtn');
     let container = document.querySelector('.container');
+    let gamestart = document.querySelector('.gamestart');
+    let scoretable = document.querySelector('.scoretable');
+    let lowscore = document.getElementById('lowscore');
     let controls = document.getElementById('controls');
     let howtoplay = document.getElementById('howtoplay');
+    let viewscore = document.getElementById('viewscore');
     let chooseplayer = document.getElementById('chooseplayer');
     let mainplayer = document.getElementById('player');
     let playercaption = document.getElementById('playercaption');
@@ -40,6 +43,7 @@ $(document).ready(function () {
             controls.style.display = "none";
             howtoplay.style.display = "none";
             container.style.display = "none";
+            viewscore.style.display = "none";
             gamestartmsg = false;
             setTimeout(() => {
                 document.getElementById('obstacle').style.visibility = "visible";
@@ -157,6 +161,22 @@ $(document).ready(function () {
 
     }
 
+    document.getElementById("viewscore").onmouseenter = function() {
+
+        container.style.display = "none";
+        gamestart.style.display = "none";
+        scoretable.style.display = "block";
+    
+    }
+    document.getElementById("viewscore").onmouseleave = function() {
+
+        container.style.display = "block";
+        gamestart.style.display = "block";
+        scoretable.style.display = "none";
+       
+        
+    }
+
 
     const crossingcheck = setInterval(() => {
 
@@ -185,10 +205,15 @@ $(document).ready(function () {
             // myaudio.loop = true;
             myaudio.autoplay = true;
             gameon = false;
+           
 
             document.addEventListener('keydown', function (e) {
                 if (e.key === 'Enter') {
-                    document.getElementById("submitscore").click();
+                    if (parseInt(score.innerHTML.toString()) > parseInt(lowscore.innerHTML.toString())){
+
+                        document.getElementById("submitscore").click();
+                    }
+                    
                     setTimeout(() => {
                         window.location.reload();
                     }, 500);
@@ -197,8 +222,12 @@ $(document).ready(function () {
 
             });
 
-            document.getElementById("restartbtn").onclick = function() {
-                document.getElementById("submitscore").click();
+            document.getElementById('restartbtn').onclick = function() {
+                if (parseInt(score.innerHTML.toString()) > parseInt(lowscore.innerHTML.toString())){
+
+                    document.getElementById("submitscore").click();
+                }
+                
                 setTimeout(() => {
                     window.location.reload();
                 }, 500);
@@ -280,6 +309,7 @@ $(document).ready(function () {
             document.getElementById("nextlevelbtn").onclick = nextlevel;
             document.addEventListener('keydown', function (e) {
                 if (e.key === ' ') {
+                    
                     nextlevel();
                 }
 

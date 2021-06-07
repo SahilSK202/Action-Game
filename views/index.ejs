@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="icon" href="./static/images/favicon.ico">
+
+    <title>Action Survival Game🚗</title>
+</head>
+
+<body>
+    <section class="city-outer">
+        <div class="cloud"></div>
+        <img class="tree2" src="../static/images/tree2.gif" alt="">
+        <img class="crystals" src="../static/images/crystals.gif" alt="">
+        <img class="birds" src="../static/images/birds.gif" alt="">
+        <img class="lighthouse" src="../static/images/lighthouse.gif" alt="">
+        <div class="city-inner"></div>
+        <img class="player" id="player" src="../static/images/zombie.gif" alt="">
+        <img class="obstacle" id="obstacle" src="../static/images/snake.gif" alt="./static/images/dragon2.gif">
+    </section>
+    <div id="wrapper">
+        <div class="container">
+            <form action="/" method="post">
+                <div><input class="from-control" type="text" name="playername" id="playername"
+                        placeholder="Enter Your Name " autocomplete="off" required></div>
+                <div style="display: none;"><input class="from-control" type="number" name="playerscore"
+                        id="playerscore"></div>
+                <div style="display: none;"><input type="submit" value="submit" id="submitscore"
+                        class="btn btn-primary"> </div>
+            </form>
+        </div>
+        <div class="gamestart">
+            <h2 id="selectplayer">Select Player </h2>
+            <div class="content">
+                <div class="images">
+                    <a href="#" class="previousbtn round">&#8249;</a>
+                    <img class="chooseplayer" id="chooseplayer" src="../static/images/zombie.gif">
+                    <a href="#" class="nextbtn round">&#8250;</a>
+                    <h2 id="playercaption">Zombie Uncle</h2>
+                </div>
+                <div class="playbtn" id="playbtn">Play</div>
+            </div>
+        </div>
+        <div class="scoretable" style="display: none;">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (var i=0; i < scoreList.length; i++) { %>
+                        <tr>
+                            <th scope="row">
+                                <%= i+1 %>
+                            </th>
+                            <td>
+                                <%= scoreList[i].name %>
+                            </td>
+                            <% if (i==4) { %>
+                                <td id="lowscore">
+                                    <%= scoreList[i].score %>
+                                </td>
+                            <% } else { %>
+                                <td>
+                                    <%= scoreList[i].score %>
+                                </td>
+                            <% } %>
+                        </tr>
+                    <%}%>
+                </tbody>
+            </table>
+            <!-- <div class="playbtn" id="restartbtn">Play Again !</div> -->
+        </div>
+    </div>
+    <div class="actions">
+        <a id="controls">Controls</a>
+
+        <ul id="actions">
+            <li>Left Arrow Key : Move Backward</li>
+            <li>Right Arrow Key : Move Forward</li>
+            <li>Spacebar key : Jump</li>
+            <li>Enter key : Pause/Resume</li>
+            <li>'M' key: Change Music</li>
+        </ul>
+    </div>
+    <div class="howtoplayactions">
+        <a id="howtoplay">How to play ?</a>
+
+        <ul id="howtoplayactions">
+            <li>Avoid obstacles by jumping.</li>
+            <li>Achieve target score.</li>
+        </ul>
+    </div>
+    <div class="viewscore">
+        <a id="viewscore">Score Board</a>
+    </div>
+    <div class="score">Your Score : <span id="score">0</span></div>
+    <div class="targetscore">Target Score : <span id="targetscore">100</span></div>
+    <div class="credits">Made with 💖 by <a id="myname" href="https://github.com/SahilSK202/Action-Game">Sahil
+            Kavitake</a></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./static/js/main.js"></script>
+
+</body>
+
+</html>
