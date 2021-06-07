@@ -37,20 +37,26 @@ $(document).ready(function () {
 
 
     playbtn.onclick = function () {
-        if (gamestartmsg) {
-            $('.gamestart').fadeOut(500);
-            // controls.style.visibility = "hidden";
-            controls.style.display = "none";
-            howtoplay.style.display = "none";
-            container.style.display = "none";
-            viewscore.style.display = "none";
-            gamestartmsg = false;
-            setTimeout(() => {
-                document.getElementById('obstacle').style.visibility = "visible";
-                obstacle.classList.toggle('obstacleanimation');
-            }, 5000);
+        var x = document.forms["myform"]["playername"].value;
+        if(x.length < 1){
+            document.getElementById("playername").style.border = "3px solid red";
+        }else{
+
+            if (gamestartmsg) {
+                $('.gamestart').fadeOut(500);
+                // controls.style.visibility = "hidden";
+                controls.style.display = "none";
+                howtoplay.style.display = "none";
+                container.style.display = "none";
+                viewscore.style.display = "none";
+                gamestartmsg = false;
+                setTimeout(() => {
+                    document.getElementById('obstacle').style.visibility = "visible";
+                    obstacle.classList.toggle('obstacleanimation');
+                }, 5000);
+            }
+            play();
         }
-        play();
 
     }
     
@@ -197,7 +203,7 @@ $(document).ready(function () {
             obstacle.style.visibility = "hidden";
             document.getElementById("playerscore").value = parseInt(score.innerHTML.toString());
             // document.getElementById("submitscore").click();
-            $('.gamestart').html(`<img class="winner" src="../static/images/gameover.gif" alt=""><br><br><div class="playbtn" id="restartbtn">Play Again !</div>`);
+            $('.gamestart').html(`<img class="winner" src="../static/images/gameover.gif" alt=""><br><div class="playbtn" id="restartbtn">Play Again !</div>`);
             $('.gamestart').fadeIn(500);
             myaudio.pause();
             myaudio = new Audio("../static/gameover.mp3");
