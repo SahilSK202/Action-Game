@@ -14,15 +14,7 @@ Making learning fun motivates students and helps them pay attention and stay foc
 * **Music** -  Background music can be changed
 <br>**Music Credits** :-  https://www.youtube.com/c/funtwoHimself/videos
 
-## Game characters
-![Brave Boy](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/boy.gif)
-![Gusty Girl](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/girl.gif)
-![Love Birds](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/couple.gif)
-![Super Dad](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/dad.gif)
-![Family Man](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/family.gif)
-![Kitty Van](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/van.gif)
-![Zombie Uncle](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/zombie.gif)
-![Dangerous Dragon](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/dragon2.gif)
+
 
 
 ### [Benifits of Video Games:](https://www.geico.com/living/home/technology/9-reasons-to-give-video-games-a-try/#:~:text=Gaming%20is%20really%20a%20workout%20for%20your%20mind,navigation.%29%203.%20Gamers%20may%20have%20better%20social%20skills.)
@@ -59,3 +51,12 @@ There are lot of things to improve upon
 - A.I. can be used for to increase difficulty level.
 
 
+
+## Game characters
+![Brave Boy](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/boy.gif)
+![Gusty Girl](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/girl.gif)
+![Love Birds](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/couple.gif)
+![Super Dad](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/dad.gif)
+![Family Man](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/family.gif)
+![Kitty Van](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/van.gif)
+![Zombie Uncle](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/zombie.gif)
