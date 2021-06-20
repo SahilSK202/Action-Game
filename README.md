@@ -33,10 +33,10 @@ Making learning fun motivates students and helps them pay attention and stay foc
 # Demo
 ## Play Now : https://action-survival-game.herokuapp.com/
 
-![](https://github.com/SahilSK202/Action-Survival-Game/tree/main/static/images/1.png)
-![](https://github.com/SahilSK202/Action-Survival-Game/tree/main/static/images/2.png)
-![](https://github.com/SahilSK202/Action-Survival-Game/tree/main/static/images/3.png)
-![](https://github.com/SahilSK202/Action-Survival-Game/tree/main/static/images/4.png)
+![](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/1.png)
+![](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/2.png)
+![](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/3.png)
+![](https://github.com/SahilSK202/Action-Survival-Game/blob/main/static/images/4.png)
 
 
 ## Further Improvements
