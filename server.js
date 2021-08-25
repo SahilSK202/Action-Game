@@ -14,7 +14,7 @@ app.use(express.json());
 app.set('view engine', 'ejs');
 
 
-mongoose.connect('mongodb+srv://sahiluser:sahilpassword@cluster0.de2sm.mongodb.net/GameScore?retryWrites=true&w=majority', { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
+
 // const connectDB = async() =>{
 //   return mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex:true, useUnifiedTopology: true } , err =>{
 //     if (err){
